@@ -32,13 +32,8 @@ std::vector<std::string> loadPlaylist(const std::string &directory) {
     return playlist;
 }
 
-int main(int argc, char* argv[]) {
-    if (argc < 2) {
-        std::cerr << "Usage: " << argv[0] << " <music_directory>" << std::endl;
-        return 1;
-    }
-
-    std::string musicDirectory = argv[1];
+int main() {
+    std::string musicDirectory = "/home/ubuntu/toan/taglib/test/mp3";
     std::vector<std::string> playlist = loadPlaylist(musicDirectory);
     if (playlist.empty()) {
         std::cerr << "No mp3 files found in " << musicDirectory << std::endl;
